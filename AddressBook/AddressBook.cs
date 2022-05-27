@@ -9,10 +9,11 @@ namespace AddressBook
     /*first and last names, address,
 city, state, zip, phone number and
 email...*/
+
     internal class AddressBook
     {
         List<Address> addresses;
-
+        
         public AddressBook()
         {
             addresses = new List<Address>();
@@ -64,8 +65,9 @@ email...*/
 
         public Address find(string name)
         {
-            Address addr = addresses.Find((a) => a.name == name);
+            Address addr = addresses.Find((a) => a.getName() == name);
             return addr;
         }
+
     }
 }
